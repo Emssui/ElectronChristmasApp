@@ -1,0 +1,11 @@
+body {
+    margin: 0; /* Remove default margin */
+    background-color: rgb(56, 56, 151);
+}
+
+
+#closeBtn {
+    cursor: pointer;
+    padding: 0 10px; /* Add some horizontal padding */
+}
+
