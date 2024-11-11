@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu, ipcMain } = require('electron/main');
+const path = require('path');
 
 // Disable the default application menu
 Menu.setApplicationMenu(null);
@@ -10,10 +11,11 @@ const createWindow = () => {
         frame: false,      
         resizable: false,  
         webPreferences: {
-            preload: __dirname + '/preload.js', 
+            preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true,
             enableRemoteModule: false 
-        }
+        },
+        icon: path.join(__dirname, 'assets/images/crown.png') // Use an absolute path for the icon
     });
 
     win.loadFile('index.html');
