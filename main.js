@@ -42,3 +42,5 @@ app.on('window-all-closed', () => {
         app.quit();
     }
 });
+
+if (require('electron-squirrel-startup')) app.quit();
